@@ -1,0 +1,83 @@
+.bg{
+    background-color: #e3e4e5;
+}
+#signIn{
+    width: 525px;
+    height: 256px;
+    margin: 0 auto;
+    margin-top: 80px;
+    opacity: .8;
+}
+#signIn>.signIn_left{
+    float: left;
+    width: 364px;
+    height: 483px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+.signIn_bt{
+    border: none;
+    background: #37b5f9;
+    opacity: .9;
+    color: #fff;
+    width: 227px;
+    height: 25px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.signIn_left{
+    float: left;
+    width: 299px;
+    height: 256px;
+    padding-left: 38px;
+    box-sizing: border-box;
+}
+#signIn>.signIn_right>a{
+    float: left;
+    width: 135px;
+    height: 30px;
+    border-radius: 3px;
+    margin: 0 0 10px 0;
+    box-sizing: border-box;
+    padding-left: 50px;
+    font: bold 13px "microsoft yahei",simsun,Tahoma,sans-serif;
+    line-height: 30px;
+}
+#signIn>.signIn_right>a:nth-child(2){
+    background: url("../img/foodstore_img3_1.png") no-repeat 28px 6px;
+    border: 1px solid #00c800;
+    color: #00c800;
+}
+#signIn>.signIn_right>a:nth-child(3){
+    background: url("../img/wechat.png") no-repeat 28px 6px;
+    border: 1px solid #37b5f9;
+    color: #37b5f9;
+}
+#signIn>.signIn_right>a:nth-child(4){
+    background: url("../img/sinablog.png") no-repeat 28px 6px;
+    border: 1px solid #f26d7e;
+    color: #f26d7e;
+}
+.vali_info{/* 页面初始，验证消息不显示 */
+    display:none;
+}
+.vali_success{
+    background-image:url("../img/ok.png");
+    background-repeat: no-repeat;
+    padding-left:20px;
+    width:0px;height:20px;
+    overflow:hidden;
+}
+/* 验证消息：验证失败时的样式 */
+.vali_fail{
+    background-image:url("../img/err.png");
+    background-repeat: no-repeat;
+    border:1px solid red;
+    background-color:#ddd;
+    color:Red;
+    padding-left:30px;
+}
+.bg{
+    background-color: #e3e4e5;
+    background-image:url("../img/1440x900_9dced86604442ab.jpg");
+}

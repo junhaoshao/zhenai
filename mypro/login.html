@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="bg">
+<div class="container p-0">
+  <header>
+    <iframe class="my_header" src="header.html" frameborder="0"></iframe>
+  </header>
+  <!--登陆页面-->
+    <div id="login">
+      <!--左侧登陆界面-->
+      <div class="login_left">
+        <h2>请登陆</h2>
+        <form id="1form" method="post" action="mypro/login">
+          <div>
+            账号：<input type="text" id="uname">
+          </div>
+          <div>
+            密码：<input type="password" id="upwd">
+          </div>
+          <div>
+            <input type="checkbox" value>
+            <span>记住我</span>
+            <a href="reqister.html">忘记密码？</a>
+            <a href="reqister.html">立即注册</a>
+          </div>
+          <input type="button" class="login_bt" onclick="login()"  value="登陆">
+        </form>
+      </div>
+      <!--右侧登陆界面-->
+      <div class="login_right">
+        <p>使用以下账号直接登录</p>
+        <a href="#">QQ注册</a>
+        <a href="#">微信注册</a>
+        <a href="#">微博注册</a>
+      </div>
+    </div>
+  <footer>
+    <iframe class="my_footer" src="footer.html" frameborder="0"></iframe>
+  </footer>
+  <script src="js/common.js"></script>
+  <script>
+      function login() {
+          var xhr = createXhr();
+          xhr.onreadystatechange = function () {
+              if (xhr.readyState == 4 && xhr.status == 200) {
+                  var res = xhr.responseText;
+                  console.log(res);
+              }
+          }
+          xhr.open("post", "mypro/login", true);
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          var uname = $("uname").value;
+          var upwd = $("upwd").value;
+          var formData = "uname=" + uname + "&upwd=" + upwd;
+          xhr.send(formData);
+      }
+  </script>
+</div>
+</body>
+</html>

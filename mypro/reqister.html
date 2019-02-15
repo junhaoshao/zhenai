@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/signIn.css">
+</head>
+<body class="bg">
+<div class="container p-0">
+  <!--页头-->
+  <header>
+    <iframe class="my_header" src="header.html" frameborder="0"></iframe>
+  </header>
+  <!--注册页面-->
+  <div id="signIn">
+    <!--左侧登陆界面-->
+    <div class="signIn_left">
+      <h2>欢迎注册</h2>
+      <form method="post" action="mypro/reg">
+        <div>
+          账号：<input type="text" name="uname" placeholder="6~16位字母或数字">
+        </div>
+        <div>
+          <div class="vali_info">
+            6~16个字符以内的字母或数字的组合
+          </div>
+        </div>
+        <div>
+          密码：<input type="password" name="upwd" placeholder="6~12位字母或数字">
+        </div>
+        <div>
+          <div class="vali_info">
+            6~12个字符以内的字母或数字的组合
+          </div>
+        </div>
+        <div>
+          手机：<input type="number" name="phone" placeholder="手机号">
+          <p></p>
+        </div>
+        <div>
+          <div class="vali_info">
+            11个数字的组合
+          </div>
+        </div>
+        <div>
+          <input type="checkbox">
+          <span>
+            以阅读并同意<br>
+            <a href="#" target="_blank">
+              <span>《甄爱旅游使用协议》</span>
+            </a>
+          </span>
+        </div>
+        <button class="signIn_bt">注册</button>
+      </form>
+    </div>
+    <!--右侧登陆界面-->
+    <div class="signIn_right">
+      <p>使用以下账号直接登录</p>
+      <a href="#">QQ注册</a>
+      <a href="#">微信注册</a>
+      <a href="#">微博注册</a>
+    </div>
+  </div>
+  <!--页尾-->
+  <footer>
+    <iframe class="my_footer" src="footer.html" frameborder="0"></iframe>
+  </footer>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/register.js"></script>
+<script>
+    //1.查找触发事件的元素
+    $("input:checkbox")
+    //2.绑定事件处理函数
+        .on("click",function(){
+            var $chb=$(this);
+            //3.查找要修改的元素
+            $(":input:not(:checkbox)")
+            //4.修改元素
+                .prop("disabled",!($chb.prop("checked")))
+        })
+</script>
+</body>
+</html>
